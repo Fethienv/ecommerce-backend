@@ -1,1 +1,1 @@
-# Django E-commerce project backend
+# Django E-commerce backend project
