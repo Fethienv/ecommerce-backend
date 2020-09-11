@@ -87,6 +87,7 @@ DATABASES = {
                 'host': '127.0.0.1',
                 'port': 27017,
         },
+        'CONN_MAX_AGE': 500,  # Heroku
     },
 }
 
