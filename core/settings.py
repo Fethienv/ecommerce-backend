@@ -128,6 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/' + THEMES_DIR + '/' + THEME_NAME + '/static/'
+STATIC_ROOT = str(BASE_DIR) + '/' + THEMES_DIR + '/' + THEME_NAME + '/static'
 
 # Heroku users
 django_heroku.settings(locals())
