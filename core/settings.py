@@ -80,6 +80,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 # MongoDB
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
@@ -93,9 +94,10 @@ DATABASES = {
         },
     },
 }
+'''
 
 # Heroku postgresql
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -107,7 +109,7 @@ DATABASES = {
         'CONN_MAX_AGE': 500,  # Heroku
     },
 }
-'''
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -147,5 +149,4 @@ STATIC_URL = '/' + THEMES_DIR + '/' + THEME_NAME + '/static/'
 STATIC_ROOT = str(BASE_DIR) + '/' + THEMES_DIR + '/' + THEME_NAME + '/static'
 
 # Heroku users
-import django_heroku
 django_heroku.settings(locals())

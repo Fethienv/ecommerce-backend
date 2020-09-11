@@ -8,3 +8,7 @@ gunicorn
 django-heroku
 psycopg2
 dnspython
+djangorestframework
+django-cors-headers
+django-rest-framework
+PyJWT
