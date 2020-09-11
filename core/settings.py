@@ -79,13 +79,12 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-
-# MongoDB postgresql
+# MongoDB
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'ecommerce_backend_db',
-        'HOST': "mongodb+srv://ecommerce_backend:29hhiQykG3Stqrpn@cluster0.wtb5y.mongodb.net/?retryWrites=true&w=majority",
+        'HOST': "mongodb+srv://ecommerce_backend:29hhiQykG3Stqrpn@cluster0.wtb5y.mongodb.net/ecommerce_backend_db?retryWrites=true&w=majority",
         'PORT': 27017,
         'USER': 'ecommerce_backend',
         'PASSWORD': '29hhiQykG3Stqrpn',
