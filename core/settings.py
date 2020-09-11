@@ -147,4 +147,5 @@ STATIC_URL = '/' + THEMES_DIR + '/' + THEME_NAME + '/static/'
 STATIC_ROOT = str(BASE_DIR) + '/' + THEMES_DIR + '/' + THEME_NAME + '/static'
 
 # Heroku users
+import django_heroku
 django_heroku.settings(locals())
