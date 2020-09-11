@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -59,7 +60,7 @@ THEMES_DIR = 'themes'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [str(BASE_DIR) + '/' + THEMES_DIR + '/' + THEME_NAME + '/templates',],
+        'DIRS': [str(BASE_DIR) + '/' + THEMES_DIR + '/' + THEME_NAME + '/templates', ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -85,7 +86,7 @@ DATABASES = {
         'CLIENT': {
                 'host': '127.0.0.1',
                 'port': 27017,
-            },
+        },
     },
 }
 
@@ -126,3 +127,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/' + THEMES_DIR + '/' + THEME_NAME + '/static/'
+
+# Heroku users
+django_heroku.settings(locals())
