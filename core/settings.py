@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'apps.main',
 ]
 
 MIDDLEWARE = [
@@ -51,10 +53,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'core.urls'
 
+THEME_NAME = 'starship'
+THEMES_DIR = 'themes'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [str(BASE_DIR) + '/' + THEMES_DIR + '/' + THEME_NAME + '/templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,9 +80,13 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'djongo',
+        'NAME': 'ecommerce_backend',
+        'CLIENT': {
+                'host': '127.0.0.1',
+                'port': 27017,
+            },
+    },
 }
 
 
@@ -113,8 +122,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/' + THEMES_DIR + '/' + THEME_NAME + '/static/'
