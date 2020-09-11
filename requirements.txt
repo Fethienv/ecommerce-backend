@@ -7,3 +7,4 @@ sqlparse==0.2.4
 gunicorn
 django-heroku
 psycopg2
+dnspython
