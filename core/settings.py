@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'ecommerce_backend',
@@ -87,10 +87,21 @@ DATABASES = {
                 'host': '127.0.0.1',
                 'port': 27017,
         },
+    },
+}'''
+
+# Heroku postgresql
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd85hf0nimeug4t',
+        'HOST': 'ec2-54-247-78-30.eu-west-1.compute.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'fytiwucmgvxgas',
+        'PASSWORD': '3b86f2983cd6889608bc471bc374c51a2182c5c94f95171b754d33d0f7a542f8',
         'CONN_MAX_AGE': 500,  # Heroku
     },
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

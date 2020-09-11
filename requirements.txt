@@ -6,3 +6,4 @@ pytz==2020.1
 sqlparse==0.2.4
 gunicorn
 django-heroku
+psycopg2
