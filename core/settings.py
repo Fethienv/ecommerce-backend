@@ -83,11 +83,14 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'ecommerce_backend_db',
-        'HOST': "mongodb+srv://ecommerce_backend:29hhiQykG3Stqrpn@cluster0.wtb5y.mongodb.net/ecommerce_backend_db?retryWrites=true&w=majority",
-        'PORT': 27017,
-        'USER': 'ecommerce_backend',
-        'PASSWORD': '29hhiQykG3Stqrpn',
+        "CLIENT": {
+            "name": 'ecommerce_backend_db',
+            "host": "mongodb+srv://ecommerce_backend:29hhiQykG3Stqrpn@cluster0.wtb5y.mongodb.net/ecommerce_backend_db?retryWrites=true&w=majority",
+            'port': 27017,
+            "username": 'ecommerce_backend',
+            "password": '29hhiQykG3Stqrpn',
+            "authMechanism": "SCRAM-SHA-1",
+        },
     },
 }
 
